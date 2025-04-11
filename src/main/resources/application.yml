@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database-1.cr6kassm00po.ap-northeast-2.rds.amazonaws.com:3306/camticket
+    username: admin
+    password: wntkfkd11!
+    hikari:
+      maximum-pool-size: 10
+      idle-timeout: 600000
+      max-lifetime: 600000
+      connection-timeout: 30000
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: false
+    defer-datasource-initialization: true
+
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+custom:
+  host:
+    client: http://localhost:3000
+  jwt:
+    secret: "gjITbPwjXp3ZvUfcGx+sxaeB3Mdxcbfur9ZGZkmwgQs="
+    expire-time-ms: 7200000000
+    refresh-expire-time-ms: 7200000000
+
+kakao:
+  api:
+    key:
+      client: "50dbe2657adf82b46b21b65a533d3cda"  # 클라이언트 키
+    auth-url: "https://kauth.kakao.com/oauth/authorize"
+    redirect-uri: "http://localhost:8080/api/camticket/auth/kakao-login"

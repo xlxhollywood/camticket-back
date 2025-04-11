@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>로그인 성공</title>
+</head>
+<body>
+<h1>로그인 성공 🎉</h1>
+<p>환영합니다, <strong th:text="${nickname}">사용자</strong>님!</p>
+
+<h3>📦 토큰 정보</h3>
+<p><strong>Access Token:</strong> <span th:text="${accessToken}"></span></p>
+<p><strong>Refresh Token:</strong> <span th:text="${refreshToken}"></span></p>
+<p><strong>카카오 ID:</strong> <span th:text="${kakaoId}"></span></p>
+</body>
+</html>
